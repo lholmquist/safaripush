@@ -120,6 +120,12 @@ var SampleApp = function() {
             self.app.get(r, self.routes[r]);
         }
 
+        self.app.post('/v1/pushPackages/web.aerogear.push', function( req, res ) {
+            console.log( "package" );
+            console.log( req );
+            res.send(200);
+        });
+
         self.app.post('/v1/log', function( req, res ) {
             console.log( req );
             res.send( 200 );

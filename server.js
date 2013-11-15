@@ -122,7 +122,7 @@ var SampleApp = function() {
 
         self.app.post('/v1/pushPackages/web.aerogear.push', function( req, res ) {
             console.log( "argh" );
-            var file = fs.readFileSync('pushPackage1384548488.zip');
+            var file = fs.readFileSync('./pushPackage1384548488.zip');
             res.set({
                 'Content-type': 'application/zip'
             });

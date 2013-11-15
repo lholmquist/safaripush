@@ -119,6 +119,11 @@ var SampleApp = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+
+        self.app.post('/v1/log', function( req, res ) {
+            console.log( req );
+            res.send( 200 );
+        });
     };
 
 

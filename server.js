@@ -135,6 +135,11 @@ var SampleApp = function() {
             console.log( req );
             res.send( 200 );
         });
+
+        self.app.post('/v1/devices/:deviceToken/registrations/web.aerogear.push', function( req, res ){
+            console.log( "tokens", req.param.deviceToken );
+            res.send( 200 );
+        });
     };
 
 

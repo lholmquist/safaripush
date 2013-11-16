@@ -3,6 +3,8 @@
 var express = require('express');
 var fs      = require('fs');
 
+var dataDir = process.env.OPENSHIFT_DATA_DIR || './';
+
 
 /**
  *  Define the sample application.
@@ -122,7 +124,7 @@ var SampleApp = function() {
 
         self.app.post('/v1/pushPackages/web.aerogear.push', function( req, res ) {
             console.log( "argh" );
-            var file = fs.readFileSync('./pushPackage1384548488.zip');
+            var file = fs.readFileSync( dataDir + 'pushpackage.zip');
             res.set({
                 'Content-type': 'application/zip'
             });
